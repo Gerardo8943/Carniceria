@@ -3,12 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
+use App\Livewire\Dashboard\Index;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
 
-Route::view('dashboard', 'dashboard')
+Route::get('/dashboard', Index::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
