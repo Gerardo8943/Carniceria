@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('retiros', function (Blueprint $table) {
             $table->id();
             $table->foreignId('producto_id')->constrained()->cascadeOnDelete();
-            $table->interger('cantidad');
+            $table->integer('cantidad');
             $table->string('destino');
             $table->string('direccion_destino');
             $table->date('fecha_retiro');
